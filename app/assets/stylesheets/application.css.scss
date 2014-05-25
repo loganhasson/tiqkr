@@ -33,3 +33,37 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+
+*[draggable=true] {
+  -khtml-user-drag: element;
+  cursor: move;
+}
+
+#droppable-div {
+  border: 3px dashed #ccc;
+  padding: 10px;
+  background: #fff;
+  min-height: 200px;
+/*  overflow-y: auto;*/
+}
+
+#droppable-div .info {
+  color: #999;
+  text-align: center;
+}
+
+#droppable-div ul {
+  margin: 0;
+  padding: 0;
+}
+
+#droppable-div li {
+  border-top: 2px solid #ccc;
+  list-style: none;
+  padding: 5px;
+  font-size: 90%;
+}
+
+#droppable-div li:first-child {
+  border-top: 0;
+}

@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require html5utils
+//= require droppable
 //= require bootstrap
 //= require_tree .
