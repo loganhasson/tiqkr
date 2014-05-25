@@ -14,6 +14,7 @@ set :app_two_ip, '107.170.178.204'
 role :app, "#{app_one_ip}"
 role :app, "#{app_two_ip}"
 role :web, "#{app_one_ip}"
+role :web, "#{app_two_ip}"
 default_run_options[:pty] = true
 default_run_options[:shell] = '/bin/bash --login'
 
