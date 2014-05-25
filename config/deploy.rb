@@ -19,7 +19,7 @@ default_run_options[:shell] = '/bin/bash --login'
 
 namespace :deploy do
   task :kill_unicorn, :roles => :app do
-    run "if sudo kill -0 `cat #{shared_path}/pids/unicorn.pid`> /dev/null 2>&1; then sudo kill -9 `cat #{shared_path}/pids/unicorn.pid`; else echo 'Unicorn is not running'; fi"
+    run "if kill -0 `cat #{shared_path}/pids/unicorn.pid`> /dev/null 2>&1; then kill -9 `cat #{shared_path}/pids/unicorn.pid`; else echo 'Unicorn is not running'; fi"
   end
 
   task :symlink_api_credentials, :roles => :app do
@@ -33,7 +33,7 @@ namespace :deploy do
   task :start do ; end
   task :stop do ; end
   task :restart do
-    run "cd #{current_path} && unicorn_rails -c config/unicorn.rb -D -E production"
+    run "cd #{current_path} && unicorn -c config/unicorn.rb -D -E production"
   end
 end
 
