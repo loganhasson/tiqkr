@@ -37,4 +37,4 @@ Link to your blog, twitter, etc!
 
 ## License
 
-My Spiffy App is MIT Licensed. See LICENSE for details.
+Tiqkr is MIT Licensed. See LICENSE for details.
