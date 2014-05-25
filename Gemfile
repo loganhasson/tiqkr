@@ -13,6 +13,7 @@ gem 'spring',           group: :development
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
 gem 'figaro'
+gem 'capistrano', '~> 2.15.5'
 
 group :test, :development do
   gem 'rspec-rails'
